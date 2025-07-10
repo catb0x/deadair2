@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deadAir</title>
+    <link href="live_files/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        @font-face {
+            font-family: 'attiqueantique_demibold';
+            src: url('/path-to-your-font-folder/atticantique_demibold-demo.woff2') format('woff2'),
+                 url('/path-to-your-font-folder/atticantique_demibold-demo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html, body, h1, h2, h3, h4, h5, h6, p, a, div, span, td, th {
+            font-family: 'attiqueantique_demibold', serif; /* Applying the font throughout */
+        }
+
+        html, body {
+            cursor: url("https://downloads.totallyfreecursors.com/cursor_files/greatfull_dead_bears.ani"),
+                   url("https://downloads.totallyfreecursors.com/thumbnails/greatfull_dead_bears.gif"), auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(livebg.png);
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            background-color: #cccccc;
+            color: #fff; 
+            text-align: center; 
+        }
+
+        /* Bulletin board section */
+        .bulletin-board {
+            display: flex; 
+            flex-direction: row; 
+            flex-wrap: wrap; /* Allow wrapping of items */
+            justify-content: center; /* Center items */
+            align-items: flex-start; /* Align items to the start */
+            gap: 10px; /* Space between containers */
+            padding:100px; /* Padding for spacing */
+            max-width: 900px; /* Adjusted maximum width of the bulletin board */
+            margin: 40px auto 0; /* Add margin-top to push down flyers */
+        }
+
+        .flyer {
+            width: 250px; /* Adjusted width of each flyer */
+            height: 350px; /* Adjusted height of each flyer */
+            border: 2px solid #ccc; /* Border for the flyer */
+            border-radius: 8px; /* Rounded corners */
+            background: url(postit.png) no-repeat center; /* Background image for the flyer */
+            background-size: cover; /* Make background cover the entire container */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            overflow: hidden; /* Clip content */
+            position: relative; /* For absolute positioning of inner elements */
+            padding: 10px; /* Padding inside the flyer */
+            display: flex; /* Use flex for content alignment */
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center align items */
+        }
+
+        /* Responsive image sizes */
+        img {
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Title styles */
+        .title {
+            margin-bottom: 20px; 
+        }
+        
+               .floating-image {
+            position: fixed; /* Position relative to viewport */
+            bottom: 0; /* Position at the bottom */
+            right: 0; /* Position at the right */
+            width: 200px; /* Set the width */
+            height: 200px; /* Set the height */
+            z-index: 20; /* Higher z-index to appear above other content */
+            margin: 0; /* Remove any default margin */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .container {
+                height: auto; /* Allow height to adjust based on content */
+                padding: 5px; /* Reduce padding */
+                font-size: 0.8em; /* Smaller font size for mobile */
+            }
+
+            .floating-image {
+                width: 100px; /* Smaller width for mobile */
+                height: 100px; /* Smaller height for mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <div class="title">
+        <img src="live_files/dAjester.gif">        
+        <img src="live_files/skelblues.gif">
+        <img src="live_files/iron.gif" alt="Iron" width="110px" height="110px">
+        <img src="live_files/skelblues.gif">
+        <img src="live_files/dAjester.gif">
+        <br>   
+        <br>
+    </div>
+
+    <!-- Bulletin Board Section -->
+<div class="bulletin-board">
+    <a href="https://linktr.ee/warbrained">
+        <div class="flyer">
+            <br><br><img src="live_files/warbrainedflyer.png" alt="Show Flyer 1">
+        </div>
+    </a>
+
+    <a href="https://kuru-elsewhere.eventbrite.com/">
+        <div class="flyer">
+            <br><br><img src="live_files/kurushow.png" alt="Show Flyer 2">
+        </div>
+    </a>
+
+    <a href="https://linktr.ee/kmoe">     
+        <div class="flyer">
+            <br><br><img src="live_files/kmoeshow.jpg" alt="Show Flyer 3">
+        </div>
+    </a>
+</div>
+    
+</center>
+
+<!-- Floating Image -->
+<a href="index.html">
+    <img src="live_files/crossroads.gif" alt="Crossroads" class="floating-image">
+</a>
+
+
+</body></html>

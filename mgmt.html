@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deadAir Management</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('mgmtbg.jpg');
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            color: white;
+            font-size: 1em;
+            padding: 10px;
+            text-align: center;
+            border-radius: 15px;
+            scroll-snap-align: start;
+        }
+
+        h3, p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Image Styling */
+        .artist-image {
+            width: 450px; /* Adjust size as needed */
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        /* Navigation Buttons */
+        .navigation-button {
+            position: absolute;
+            top: 20px;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s;
+            filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.7));
+        }
+
+        .left-button {
+            left: 20px;
+            background: url('lefthand.png') no-repeat;
+            background-size: contain;
+        }
+
+        .right-button {
+            right: 20px;
+            background: url('righthand.png') no-repeat;
+            background-size: contain;
+        }
+
+        .floating-image {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            z-index: 20;
+            margin: 0;
+        }
+
+        /* Mobile-Specific Styling */
+        @media (max-width: 768px) {
+            .container {
+                height: auto;
+                padding: 5px;
+                font-size: 0.8em;
+                align-items: center;
+            }
+
+            h3, p {
+                text-align: center;
+            }
+
+            .floating-image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-wrapper" id="containerWrapper">
+    <div class="container" id="Dazegxd">
+        <h3><br><br>DAZEGXD</h3>
+        <p>MGMT: <a href="mailto:mgmt@deadair.vyz.ee">mgmt@deadair.vyz.ee</a></p>
+        <p>BOOKING: <a href="mailto:josh@groundcontroltouring.com">josh@groundcontroltouring.com</a></p>
+        <p>CC: <a href="mailto:andrea@groundcontroltouring.com">andrea@groundcontroltouring.com</a></p>
+        <img src="mgmt_files/leezdaze-export.png" alt="DAZEGXD Cartoon" class="artist-image">
+    </div>
+    <div class="container" id="Jane Remover">
+        <h3><br><br><br>Jane Remover</h3>
+        <p>MGMT: <a href="mailto:mgmt@deadair.vyz.ee">mgmt@deadair.vyz.ee</a></p>
+        <p>BOOKING: <a href="mailto:jane.remover@teamwass.com">jane.remover@teamwass.com</a></p>
+        <img src="mgmt_files/leezjane-export.png" alt="Jane Remover Cartoon" class="artist-image">
+    </div>
+    <div class="container" id="kuru">
+        <h3><br><br><br>kuru</h3>
+        <p>MGMT: <a href="mailto:mgmt@deadair.vyz.ee">mgmt@deadair.vyz.ee</a></p>
+        <img src="mgmt_files/leezkeeg-export.png" alt="Kuru Cartoon" class="artist-image">
+    </div>
+    <div class="container" id="quannnic">
+        <h3><br><br><br><br><br>quannnic</h3>
+        <p>MGMT: <a href="mailto:mgmt@deadair.vyz.ee">mgmt@deadair.vyz.ee</a></p>
+        <p>BOOKING: <a href="mailto:jrobbins@wmeagency.com">jrobbins@wmeagency.com</a></p>
+        <img src="mgmt_files/leezquannnic-export.png" alt="Quannnic Cartoon" class="artist-image">
+    </div>
+</div>
+
+<!-- Left and Right Navigation Buttons -->
+<div class="navigation-button left-button" id="leftBtn"></div>
+<div class="navigation-button right-button" id="rightBtn"></div>
+
+<!-- Floating Image -->
+<a href="index.html">
+    <img src="mgmt_files/crossroads.gif" alt="Crossroads" class="floating-image">
+</a>
+
+<script>
+    const containerWrapper = document.getElementById('containerWrapper');
+    const containers = document.querySelectorAll('.container');
+    let currentIndex = 0;
+
+    const updateScrollPosition = () => {
+        containerWrapper.scrollTo({
+            left: containers[currentIndex].offsetLeft,
+            behavior: 'smooth'
+        });
+    };
+
+    document.getElementById('leftBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : containers.length - 1;
+        updateScrollPosition();
+    });
+
+    document.getElementById('rightBtn').addEventListener('click', () => {
+        currentIndex = (currentIndex < containers.length - 1) ? currentIndex + 1 : 0;
+        updateScrollPosition();
+    });
+
+    containerWrapper.addEventListener('scroll', () => {
+        if (containerWrapper.scrollLeft === 0) {
+            currentIndex = 0;
+        } else if (containerWrapper.scrollLeft + containerWrapper.offsetWidth >= containerWrapper.scrollWidth) {
+            currentIndex = containers.length - 1;
+        }
+    });
+</script>
+
+
+
+</body></html>

@@ -1,0 +1,282 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deadAir</title>
+    <link href="labelcatalog_files/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <style>
+        html, body {
+            cursor: url("https://downloads.totallyfreecursors.com/cursor_files/greatfull_dead_bears.ani"),
+                   url("https://downloads.totallyfreecursors.com/thumbnails/greatfull_dead_bears.gif"), auto;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Times New Roman", Times, serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        body {
+            background-image: url(dA_wawa.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-color: #222; /* Darker background for improved contrast */
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .album {
+            display: inline-block;
+            width: 200px;
+            scroll-snap-align: center;
+            border: 2px solid #444;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .album:hover {
+            transform: scale(1.05);
+            border-color: #77dd77; /* Subtle green border on hover */
+        }
+
+        .album img {
+            width: 200px;       /* Maintain full width */
+            height: 200px;     /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure images cover the container while preserving aspect ratio */
+            border-radius: 4px;
+        }
+
+        .album-title {
+            color: #f7a8b8;
+            text-shadow: 0 0 3px #f7a8b8;
+            margin-top: 10px;
+            font-size: 16px;
+            transition: color 0.2s;
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+            max-width: 100%; /* Limit the max width */
+        }
+
+        .album-links {
+            margin-top: 5px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+            max-width: 100%; /* Limit the max width */
+        }
+
+        .album-links a {
+            color: #77dd77;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .album-links a:hover {
+            color: #f7a8b8; /* Matching album title color on hover */
+        }
+
+        /* Smoothens scroll on hover to give feedback */
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #555;
+            border-radius: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background-color: #222;
+        }
+
+        /* Responsive styling for mobile */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll; /* Disable fixed background for mobile */
+                background-size: auto; /* Prevent zooming */
+                overflow-x: hidden; /* Hide overflow for cleaner look */
+            }
+
+            .scroll-container {
+                flex-direction: row; /* Maintain horizontal scrolling */
+                padding: 10px 0;
+            }
+
+            .album {
+                flex: 0 0 auto; /* Keep album size fixed */
+            }
+        }
+
+        .footer-images img {
+            margin: 0;
+            max-width: 50px;
+        }
+        
+        
+        .floating-image {
+            position: fixed; /* Position relative to viewport */
+            bottom: 0; /* Position at the bottom */
+            right: 0; /* Position at the right */
+            width: 200px; /* Set the width */
+            height: 200px; /* Set the height */
+            z-index: 20; /* Higher z-index to appear above other content */
+            margin: 0; /* Remove any default margin */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .container {
+                height: auto; /* Allow height to adjust based on content */
+                padding: 5px; /* Reduce padding */
+                font-size: 0.8em; /* Smaller font size for mobile */
+            }
+
+            .floating-image {
+                width: 100px; /* Smaller width for mobile */
+                height: 100px; /* Smaller height for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <img src="labelcatalog_files/dAjester.gif">
+        <img src="labelcatalog_files/skelblues.gif">
+        <img src="labelcatalog_files/iron.gif" alt="Iron" width="110px" height="110px">
+        <img src="labelcatalog_files/skelblues.gif">
+        <img src="labelcatalog_files/dAjester.gif">
+    </div>
+
+    <div class="scroll-container">
+        <!-- Album 1 -->
+        <div class="album">
+            <img src="labelcatalog_files/frailty.jpg" alt="FRAILTY">
+            <div class="album-title">Jane Remover - "Frailty"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/0Pm3i5huHlt1mjSLxyA1Re?si=FZFm59v6QCK1Iy-9ALEpww">Spotify</a> | <a href="https://music.apple.com/us/album/frailty/1744965581">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 2 -->
+        <div class="album">
+            <img src="labelcatalog_files/vkiss.jpg" alt="VKISS">
+            <div class="album-title">Dazegxd - "vKiSS"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/3jmnykN1KMl8hfSMmzTEwN?si=Ed-rj0ijRei2C2kXhosgEQ">Spotify</a> | <a href="https://music.apple.com/us/album/vkiss/1745761637">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 3 -->
+        <div class="album">
+            <img src="labelcatalog_files/quinn.png" alt="quinn">
+            <div class="album-title">quinn - "quinn"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/75n3winyXKHLUCOhiSRkA2?si=sdKl2us6QoG5DVZ_9KdyfA">Spotify</a> | <a>Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 4 -->
+        <div class="album">
+            <img src="labelcatalog_files/idmthy.png" alt="IDMTHY">
+            <div class="album-title">Quadeca - "I Didn't Mean To Haunt You"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/3c0NHNo2Gn0X7uARad3hGv?si=iaN7t6V_RH-4VSsT4WP57A">Spotify</a> | <a href="https://music.apple.com/us/album/i-didnt-mean-to-haunt-you/1652831428">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 5 -->
+        <div class="album">
+            <img src="labelcatalog_files/Kenopsia.jpg" alt="KENOPSIA">
+            <div class="album-title">quannnic - "Kenopsia"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/72ilxCJIul1iivwSTAdoNp?si=mAAzQxJ5QZea7YnW4CdKmg">Spotify</a> | <a href="https://music.apple.com/us/album/kenopsia/1673557437">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 6 -->
+        <div class="album">
+            <img src="labelcatalog_files/censusdesignated.jpg" alt="Census Designated">
+            <div class="album-title">Jane Remover - "Census Designated"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/4ZtC6HhG26hK47TkNhrWT1?si=GmagUJVwRhmcPiV9lFaqNw">Spotify</a> | <a href="https://music.apple.com/us/album/census-designated/1745245207">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 7 -->
+        <div class="album">
+            <img src="labelcatalog_files/stepdream.jpg" alt="Stepdream">
+            <div class="album-title">quannnic - "Stepdream"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/5E3MchKg9tSmjcinajvShd?si=0X4fJYbIQGKdW6_kFY9atA">Spotify</a> | <a href="https://music.apple.com/us/album/stepdream/1714198161">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 8 -->
+        <div class="album">
+            <img src="labelcatalog_files/scrapyard.jpg" alt="Scrapyard">
+            <div class="album-title">Quadeca - "SCRAPYARD"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/2uoD60Oip7rq3vjXxZ2VaD?si=xqNGpHedRjmffgAsfI7GtA">Spotify</a> | <a href="https://music.apple.com/us/album/scrapyard/1745245323">Apple Music</a>
+            </div>
+        </div>
+
+        <!-- Album 9 -->
+        <div class="album">
+            <img src="labelcatalog_files/em.jpg" alt="Exhibition Mode">
+            <div class="album-title">Dazegxd - "Exhibition Mode"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/5a8AWd05ntvevac8SfhwuF?si=xIstYPv_SVuC3QksUA1MHQ">Spotify</a> | <a href="">Apple Music</a>
+            </div>
+        </div>
+    
+            <!-- Album 10 -->
+        <div class="album">
+            <img src="labelcatalog_files/rewired.png" alt="re:wired">
+            <div class="album-title">Kuru - "re:wired"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/41SZeD5hrlYWJi9UNdhhGJ?si=A89_F0ajS4aGf9O37uMKxA">Spotify</a> | <a href="https://music.apple.com/us/album/re-wired/1775512438">Apple Music</a>
+            </div>
+        </div>
+        
+        
+        
+            <!-- Album 12 -->
+        <div class="album">
+            <img src="labelcatalog_files/monger.png" alt="fishmonger">
+            <div class="album-title">underscores - "fishmonger (deadAir Legacy Edition)"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/5o9aTepLhqQL2gXuKPhd8g?si=oPj3rvHySWKcsdt74EocFQ">Spotify</a> | <a href="https://music.apple.com/us/album/fishmonger/1554129662">Apple Music</a>
+            </div>
+        </div>
+        
+                  <!-- Album 13 -->
+        <div class="album">
+            <img src="labelcatalog_files/attemptedmartyr.png" alt="attempted martyr">
+            <div class="album-title">Prostitute - "Attempted Martyr"</div>
+            <div class="album-links">
+                <a href="https://open.spotify.com/album/6y6oIX7XwoWNEmoSoEpS8G?si=jYYrLd7VRxSz2LgAdwtsAw">Spotify</a> | <a href="https://music.apple.com/us/album/attempted-martyr/1775309110">Apple Music</a>
+            </div>
+        </div>
+    </div>
+<!-- Floating Image -->
+<a href="index.html">
+    <img src="labelcatalog_files/crossroads.gif" alt="Crossroads" class="floating-image">
+</a>
+
+
+</body></html>
